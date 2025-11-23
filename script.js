@@ -71,36 +71,16 @@ function playRound(humanChoice, computerChoice) {
 let humanSelection = "";
 let computerSelection = "";
 function playGame() {
-  humanSelection = getHumanChoice();
-  computerSelection = getComputerChoice();
-  playRound(humanSelection, computerSelection);
-  console.log("Human Score is: " + humanScore);
-  console.log("Computer Score is: " + computerScore);
+  let gameCount = 1;
 
-  humanSelection = getHumanChoice();
-  computerSelection = getComputerChoice();
-  playRound(humanSelection, computerSelection);
-  console.log("Human Score is: " + humanScore);
-  console.log("Computer Score is: " + computerScore);
-
-  humanSelection = getHumanChoice();
-  computerSelection = getComputerChoice();
-  playRound(humanSelection, computerSelection);
-  console.log("Human Score is: " + humanScore);
-  console.log("Computer Score is: " + computerScore);
-
-  humanSelection = getHumanChoice();
-  computerSelection = getComputerChoice();
-  playRound(humanSelection, computerSelection);
-  console.log("Human Score is: " + humanScore);
-  console.log("Computer Score is: " + computerScore);
-
-  humanSelection = getHumanChoice();
-  computerSelection = getComputerChoice();
-  playRound(humanSelection, computerSelection);
-  console.log("Human Score is: " + humanScore);
-  console.log("Computer Score is: " + computerScore);
-
+  while (gameCount <= 5) {
+    humanSelection = getHumanChoice();
+    computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
+    console.log("Human Score is: " + humanScore);
+    console.log("Computer Score is: " + computerScore);
+    gameCount += 1;
+  }
   if (computerScore > humanScore) {
     console.log("You lose! Computer wins this round");
   } else {
